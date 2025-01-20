@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Landing Page</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="header-nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <input type="checkbox" id="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <div class="container-dashboard">
+        <div class="sidebar">
+            <ul class="menu">
+                <li class="menu-item active" data-content="beranda">Beranda</li>
+                <li class="menu-item" data-content="statistik">Statistik</li>
+                <li class="menu-item" data-content="bantuan">Bantuan</li>
+                <li class="menu-item" data-content="kontak">Kontak</li>
+            </ul>
+        </div>
+
+       
+
+    <script>
+        const menuItems = document.querySelectorAll('.menu-item');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                menuItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+
+                contentSections.forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                const contentId = item.getAttribute('data-content');
+                document.getElementById(contentId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

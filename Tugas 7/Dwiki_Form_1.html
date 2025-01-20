@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to VoluntApp</title>
+    <!-- Link ke file CSS Font Awesome lokal -->
+    <link rel="stylesheet" href="assets/font-awesome/css/all.min.css" />
+    <!-- Link ke file CSS lokal -->
+    <link rel="stylesheet" href="assets/style.css" />
+    <script>
+      function togglePassword() {
+        var passwordField = document.getElementById('password');
+        var toggleIcon = document.getElementById('toggle-icon');
+        if (passwordField.type === "password") {
+          passwordField.type = "text";
+          toggleIcon.classList.remove('fa-eye');
+          toggleIcon.classList.add('fa-eye-slash');
+        } else {
+          passwordField.type = "password";
+          toggleIcon.classList.remove('fa-eye-slash');
+          toggleIcon.classList.add('fa-eye');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo" style="margin-bottom: 20px;">
+        <i class="fa-solid fa-v fa-2xl" style="color: #ffffff;"></i>
+      </div>
+      <h1 class="app-name" style="margin-bottom: 25px;">Sign Up with Email</h1>
+      <form class="signup-form" action="submit_signup.html" method="POST">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+          <i id="toggle-icon" class="fa-solid fa-eye" onclick="togglePassword()"></i>
+        </div>        
+        <div class="checkbox-group">
+          <input type="checkbox" id="terms" name="terms" />
+          <label for="terms" style="font-weight: bold;">
+            I agree to the 
+            <a href="privacy.html" class="link">Privacy Policy</a> and 
+            <a href="terms.html" class="link">Terms and Conditions</a>
+          </label>
+        </div>          
+        <button type="submit" class="signup-btn">Sign Up</button>
+      </form>
+    </div>
+    <footer>
+      <p>&copy; 2025 Dwiki Nur Setiyanto. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
+ 

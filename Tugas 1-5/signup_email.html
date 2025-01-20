@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to VoluntApp</title>
+    <link rel="stylesheet" href="assets/style.css"/>
+    <script src="https://kit.fontawesome.com/af522f91ac.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo" style="margin-bottom: 20px;">
+        <i class="fa-solid fa-v fa-2xl" style="color: #ffffff;"></i>
+      </div>
+      <h1 class="app-name" style="margin-bottom: 25px;">Sign Up with Email</h1>
+      <form class="signup-form" action="submit_signup.html" method="POST">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="terms" name="terms" />
+            <label for="terms" style="font-weight: bold;">
+              I agree to the 
+              <a href="privacy.html" class="link">Privacy Policy</a> and 
+              <a href="terms.html" class="link">Terms and Conditions</a>
+            </label>
+          </div>          
+        <button type="submit" class="signup-btn">Sign Up</button>
+      </form>
+    </div>
+    <footer>
+        <p>&copy; 2025 Dwiki Nur Setiyanto. All rights reserved.</p>
+    </footer>
+  </body>
+  
+</html>
